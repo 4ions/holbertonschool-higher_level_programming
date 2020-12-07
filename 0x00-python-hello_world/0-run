@@ -1,2 +1,3 @@
 #!/usr/bin/python3
-print("Holberton School")
+python3.4 $PYFILE
+
