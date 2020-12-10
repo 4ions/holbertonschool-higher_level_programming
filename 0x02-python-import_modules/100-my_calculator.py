@@ -3,7 +3,7 @@ from calculator_1 import add, sub, mul, div
 from sys import exit, argv
 if __name__ == "__main__":
     size = len(argv)
-    if size != 4:
+    if size -1 != 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
 
@@ -19,5 +19,5 @@ if __name__ == "__main__":
     elif argv[2] == "/":
         print("{:d} / {:d} = {:d}".format(a, b, div(a, b)))
     else:
-        print("Unknown operator. Avalible operators: +, -, * and /")
+        print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
