@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 def no_c(my_string):
 
-    copy = list(my_string)
-    for i in copy:
-        if i == 'c' or i == 'C':
-            copy.remove(i)
+    copy = ""
+    for i in my_string:
+        if i not in 'Cc':
+            copy = copy + i
 
-    return ("".join(copy))
+    return (copy)
