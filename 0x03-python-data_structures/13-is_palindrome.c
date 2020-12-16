@@ -37,9 +37,9 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 
 int is_palindrome(listint_t **head)
 {
-        listint_t *tmp, *head_t, *index, *other;
+        listint_t *tmp, *head_t, *index;
 	unsigned int count_t = 0, count_h = 0, verif = 0;
-	head_t = *head;
+
         tmp = *head;
 	
         if (!head || !*head)
@@ -53,15 +53,17 @@ int is_palindrome(listint_t **head)
 		count_t++;
 	}
         tmp = *head;
+	head_t = *head;
 	verif = count_t / 2;
 	while(verif != count_h)
 	{
 		index = get_nodeint_at_index(tmp, count_t - 1);
-		other = get_nodeint_at_index(head_t, count_h);
-		if (index->n != other->n)
+		printf("eeee %d, iiiiii %d\n", head_t->n, index->n);
+		if (index->n != head_t->n)
 		{
 			return (0);
 		}
+		head_t = head_t->next;
 		count_t -= 1;
 		count_h += 1;
 	}
