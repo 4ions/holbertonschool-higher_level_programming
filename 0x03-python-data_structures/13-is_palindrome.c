@@ -58,7 +58,7 @@ int is_palindrome(listint_t **head)
 	while(verif != count_h)
 	{
 		index = get_nodeint_at_index(tmp, count_t - 1);
-		printf("eeee %d, iiiiii %d\n", head_t->n, index->n);
+
 		if (index->n != head_t->n)
 		{
 			return (0);
