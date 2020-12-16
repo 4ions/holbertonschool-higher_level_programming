@@ -28,34 +28,33 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 }
 
 /**
- *is_palindrome - 
+ *is_palindrome - Function that checks if a singly linked list is a palindrome
+ *@head: head of linked list
  *
- *
- *
- *
+ *Return: return 1 if is palindrome or 0 is not
  */
 
 int is_palindrome(listint_t **head)
 {
-        listint_t *tmp, *head_t, *index;
+	listint_t *tmp, *head_t, *index;
 	unsigned int count_t = 0, count_h = 0, verif = 0;
 
-        tmp = *head;
-	
-        if (!head || !*head)
-        {
-                return (1);
-        }
+	tmp = *head;
+
+	if (!head || !*head)
+	{
+		return (1);
+	}
 
 	while (tmp)
 	{
 		tmp = tmp->next;
 		count_t++;
 	}
-        tmp = *head;
+	tmp = *head;
 	head_t = *head;
 	verif = count_t / 2;
-	while(verif != count_h)
+	while (verif != count_h)
 	{
 		index = get_nodeint_at_index(tmp, count_t - 1);
 
@@ -67,7 +66,7 @@ int is_palindrome(listint_t **head)
 		count_t -= 1;
 		count_h += 1;
 	}
-        return (1);
+	return (1);
 }
 
 
