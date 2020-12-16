@@ -42,7 +42,7 @@ int is_palindrome(listint_t **head)
 	head_t = *head;
         tmp = *head;
 	
-        if (!head)
+        if (!head || !*head)
         {
                 return (1);
         }
