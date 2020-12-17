@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
     result = 0
-    if isinstance(roman_string, str) or not roman_string:
+    if isinstance(roman_string, str):
         for i in range(len(roman_string)):
             if roman_string[i] == "I":
                 try:
@@ -35,6 +35,4 @@ def roman_to_int(roman_string):
                 result += 500
             if roman_string[i] == "M":
                 result += 1000
-#            print(result)
-#            print(roman_string[i])
     return(result)
