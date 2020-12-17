@@ -25,16 +25,16 @@ def roman_to_int(roman_string):
                 result += 50
             if roman_string[i] == "C":
                 try:
-                    if roman_string[i + 1] == "D" or
-                    roman_string[i + 1] == "M":
-                        result += 100
-                    else:
+                    if roman_string[i + 1] in 'DM':
                         result -= 100
+                    else:
+                        result += 100
                 except:
                     result += 100
             if roman_string[i] == "D":
                 result += 500
             if roman_string[i] == "M":
                 result += 1000
-
+#            print(result)
+#            print(roman_string[i])
     return(result)
