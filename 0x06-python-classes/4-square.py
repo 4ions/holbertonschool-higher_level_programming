@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """ Square Module """
 
 
@@ -16,8 +16,8 @@ class Square:
 
         def area(self):
                 """ Area if a square """
-                area = self.__size ** 2
-                return(area)
+                return self.__size ** 2
+                
 
         @property
         def size(self):
