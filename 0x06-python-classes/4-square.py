@@ -16,7 +16,7 @@ class Square:
 
         def area(self):
                 """ Area if a square """
-                area = self.__size * self.__size
+                area = self.__size ** 2
                 return(area)
 
         @property
