@@ -1,0 +1,77 @@
+=====
+Text Identation
+=====
+
+=====
+Import module
+=====
+>>> text = __import__('5-text_indentation').text_indentation
+
+=====
+Test
+=====
+>>> text("""Hola como esta. soy leonardo? no lo se:""")
+Hola como esta.
+<BLANKLINE>
+soy leonardo?
+<BLANKLINE>
+no lo se:
+<BLANKLINE>
+
+>>> text('   hi.      how   ?  you:    Lisa')
+hi.
+<BLANKLINE>
+how   ?
+<BLANKLINE>
+you:
+<BLANKLINE>
+Lisa
+
+>>> text('.......')
+.
+<BLANKLINE>
+.
+<BLANKLINE>
+.
+<BLANKLINE>
+.
+<BLANKLINE>
+.
+<BLANKLINE>
+.
+<BLANKLINE>
+.
+<BLANKLINE>
+
+>>> text('   hi  \n  how  \n  are  \n  you:  Bobby?')
+hi
+how
+are
+you:
+<BLANKLINE>
+Bobby?
+<BLANKLINE>
+
+>>> text(45)
+Traceback (most recent call last):
+	  	  ...
+TypeError: text must be a string
+
+>>> text("there is no punctuation here")
+there is no punctuation here
+
+>>> text(None)
+Traceback (most recent call last):
+	  	  ...
+TypeError: text must be a string
+
+>>> text()
+Traceback (most recent call last):
+	  	  ...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+
+>>> text("this", "that")
+Traceback (most recent call last):
+	  	  ...
+TypeError: text_indentation() takes 1 positional argument but 2 were given
