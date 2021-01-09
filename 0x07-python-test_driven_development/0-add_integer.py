@@ -12,5 +12,3 @@ def add_integer(a, b=98):
         else:
             c = 'a'
         raise TypeError("{} must be an integer".format(c))
-
-
