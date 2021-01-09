@@ -1,0 +1,59 @@
+========
+Print Square
+========
+
+
+Import function
+========
+
+>>> square = __import__('4-print_square').print_square
+
+========
+
+
+========
+Test
+========
+>>> square(1.0)
+Traceback (most recent call last):
+	  ...
+TypeError: size must be an integer
+
+>>> square(1)
+#
+
+>>> square(-1)
+Traceback (most recent call last):
+	  ...
+ValueError: size must be >= 0
+
+#>>> square(4)
+####
+####
+####
+####
+
+>>> square(-1.0)
+Traceback (most recent call last):
+	  ...
+TypeError: size must be an integer
+
+>>> square(4.3)
+Traceback (most recent call last):
+	  	  ...
+TypeError: size must be an integer
+
+>>> square()
+Traceback (most recent call last):
+	  	  ...
+TypeError: print_square() missing 1 required positional argument: 'size'
+
+>>> square(4, "well hello there")
+Traceback (most recent call last):
+	  	  ...
+TypeError: print_square() takes 1 positional argument but 2 were given
+
+>>> square('string')
+Traceback (most recent call last):
+	  	  ...
+TypeError: size must be an integer

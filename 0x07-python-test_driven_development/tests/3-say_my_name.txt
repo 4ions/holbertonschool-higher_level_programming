@@ -1,0 +1,53 @@
+==============
+say_my_name
+==============
+
+
+import module
+=============
+>>> say = __import__('3-say_my_name').say_my_name
+
+=============
+Test
+=============
+>>> say("hola", "hace")
+My name is hola hace
+
+>>> say(2, "hace")
+Traceback (most recent call last):
+	  ...
+TypeError: first_name must be a string
+
+>>> say(None, "scrooge")
+Traceback (most recent call last):
+	  	  ...
+TypeError: first_name must be a string
+
+>>> say()
+Traceback (most recent call last):
+	  	  ...
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+>>> say(5, 6)
+Traceback (most recent call last):
+	  	  ...
+TypeError: first_name must be a string
+
+>>> say(8, "hey")
+Traceback (most recent call last):
+	  	  ...
+TypeError: first_name must be a string
+
+>>> say("this", 8)
+Traceback (most recent call last):
+	  	  ...
+TypeError: last_name must be a string
+
+>>> say("jonas", )
+My name is jonas 
+
+>>> say(["hola"], "que")
+Traceback (most recent call last):
+	  ...
+TypeError: first_name must be a string
+
