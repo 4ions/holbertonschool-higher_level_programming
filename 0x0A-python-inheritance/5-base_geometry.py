@@ -4,4 +4,6 @@
 
 class BaseGeometry():
     """ class to Base Geometry """
-    pass
+    def __init__(self):
+        """ Initializes new geometry """
+        pass
