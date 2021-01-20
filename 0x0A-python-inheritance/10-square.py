@@ -31,4 +31,5 @@ class Square(Rectangle):
         super().__init__(size, size)
 
     def area(self):
+        """ Area """
         return super().area()
