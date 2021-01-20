@@ -2,7 +2,6 @@
 =======================
 
 
->>> print(__import__('1-my_list').MyList.__doc__)
 subclass to add methods to list class
 
 >>> MyList = __import__('1-my_list').MyList
