@@ -10,9 +10,19 @@ def pascal_triangle(n):
 
     for i in range(0, n):
         pascal_list.append([])
-        pascal_list[i].append(1)
-        for j in range(0, i):
+        for j in range(0, i + 1):
             pascal_list[i].\
-                append(pascal_list[i - 1][j - 1] + pascal_list[i - 1][j])
+                append(binomialCoeff(i, j))
 
     return pascal_list
+
+
+def binomialCoeff(n, k):
+    """ calcule number """
+    res = 1
+    if (k > n - k):
+        k = n - k
+    for i in range(0, k):
+        res = res * (n - i)
+        res = res // (i + 1)
+    return res
