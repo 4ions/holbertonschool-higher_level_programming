@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Module that lists all states with a name starting with N """ 
+""" Module that lists all states with a name starting with N """
 
 import MySQLdb
 from sys import argv
