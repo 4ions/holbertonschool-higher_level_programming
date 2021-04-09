@@ -9,7 +9,10 @@ if __name__ == "__main__":
     req = requests.get("https://api.github.com/repos/{}/{}/commits"
                        .format(owner_repo_name, repo_name))
     json = req.json()
+    count = 0
     if json:
         for i in range(0, len(json)):
-            print("{}: {}".format(json[i].get("sha"), json[i]
-                  .get("commit").get("author").get("name")))
+            if count < 10:
+                print("{}: {}".format(json[i].get("sha"), json[i]
+                    .get("commit").get("author").get("name")))
+                count += 1
