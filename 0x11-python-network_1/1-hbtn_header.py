@@ -3,8 +3,7 @@
 from urllib import request
 from sys import argv
 
-url = argv[1]
 if __name__ == "__main__":
-    with request.urlopen(url) as response:
+    with request.urlopen(arv[1]) as response:
         html = response.getheader("X-Request-Id")
         print(html)
