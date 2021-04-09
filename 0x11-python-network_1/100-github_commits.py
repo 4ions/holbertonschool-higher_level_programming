@@ -14,5 +14,5 @@ if __name__ == "__main__":
         for i in range(0, len(json)):
             if count < 10:
                 print("{}: {}".format(json[i].get("sha"), json[i]
-                    .get("commit").get("author").get("name")))
+                      .get("commit").get("author").get("name")))
                 count += 1
