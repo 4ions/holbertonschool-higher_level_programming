@@ -3,7 +3,8 @@
 import requests
 import sys
 
-req = requests.get(sys.argv[1])
-for key, value in req.headers.items():
-    if key == 'X-Request-Id':
-        print(value)
+if __name__ == '__main__':
+    req = requests.get(sys.argv[1])
+    for key, value in req.headers.items():
+        if key == 'X-Request-Id':
+            print(value)
