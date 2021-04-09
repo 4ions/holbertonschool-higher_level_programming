@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-""" Module of urllib """
+""" Fetches header from url passed as arg"""
 from urllib import request
-from sys import argv
+import sys
 
 if __name__ == "__main__":
-    with request.urlopen(arv[1]) as response:
+    with request.urlopen(sys.argv[1]) as response:
         print(response.getheader("X-Request-Id"))
